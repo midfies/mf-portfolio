@@ -1,0 +1,18 @@
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  color: #313131;
+
+}
+header a, header a:link, header a:active {
+  text-decoration: none;
+  color: #FFF;
+}
+
+header a:hover, header a:focus {
+  color: #777;
+}
+
+header a:visited {
+  color: #FFF;
+}

@@ -1,0 +1,79 @@
+.main-nav {
+  padding: 0.1em;
+  background-color: black;
+  z-index: 1000;
+  position: relative;
+
+}
+
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav:hover ul {
+  display: block;
+}
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+.icon-menu {
+  text-align: right;
+  font-size: 2em;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+#linkedInLogo{
+  border-radius: 50%;
+}
+
+a.linkedIn:link, a.linkedIn:visited{
+    color: #007bb6;
+}
+
+a.linkedIn:hover {
+    color: #00A0DC;
+}
+
+a.linkedIn:active {
+    color: #0B4971;
+}
+
+a.gitHub:link, a.gitHub:visited {
+    color: #4078c0;
+}
+
+a.gitHub:hover {
+    color: #ADCAF0;
+}
+
+a.gitHub:active {
+    color: #6e5494;
+}
+
+@media screen and (min-width: 760px){
+  .main-nav ul {
+    width: 100%;
+    /*height: 75px;*/
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-left: 30px;
+    /*clear: both;*/
+  }
+  .main-nav ul li {
+    display: inline-block;
+    padding: 0 4%;
+  }
+  .icon-menu {
+    display: none;
+  }
+}
