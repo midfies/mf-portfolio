@@ -30,6 +30,29 @@
   margin-top: 20px;
   margin-right: 10px;
 }
+.template {
+  display: none;
+}
+.project{
+  width: 45%;
+  margin: 1% 1%;
+  padding: 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 1%;
+}
+.project h2{
+  text-align: center;
+}
+.project img{
+  display: block;
+  margin: 0 auto;
+}
+.project .dateOfProject{
+  font-size: .75em;
+  text-align: right;
+}
 #linkedInLogo{
   border-radius: 50%;
 }
@@ -75,5 +98,10 @@ a.gitHub:active {
   }
   .icon-menu {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px){
+  .project{
+    width: 28%;
   }
 }
