@@ -18,22 +18,27 @@
           <img id="logo" src="http://placehold.it/60x60">
           <div class = "icon-menu"></div>
           <ul>
-            <li><a href="#top" class="icon-home"> Home</a></li>
-            <li><a href="#intro" class="icon-happy"> About</a></li>
-            <li><a href="#projectSection" class="icon-happy2"> Portfolio</a></li>
-            <li><a href="#contactSection" class="icon-address-book"> Contact</a></li>
+            <li class="tab" data-content="homeSection"><a href="#top" class="icon-home"> Home</a></li>
+            <li class="tab" data-content="aboutSection"><a href="#" class="icon-happy"> About</a></li>
+            <li class="tab" data-content="projectSection"><a href="#" class="icon-happy2"> Portfolio</a></li>
+            <li class="tab" data-content="contactSection"><a href="#" class="icon-address-book"> Contact</a></li>
           </ul>
         </nav>
       </header>
-
-    <section class="intro">
+    
+    <section id="introSection" class="tab-content">
       <h1>Marc Fieser</h1>
       <h2>Welcome to My Portfolio</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi. Pellentesque aliquet, turpis eget consectetur scelerisque, sem lorem lobortis erat, et malesuada urna dolor rutrum nisi. Donec ac accumsan leo. Integer commodo iaculis nulla et commodo. Donec et mattis ligula. Aenean varius leo id consequat sodales. Phasellus lobortis elementum nunc, vel egestas enim tincidunt a. Nulla dolor dolor, tempus euismod justo vitae, pretium placerat elit. </p>
       <img src ="http://placehold.it/1024x600"/>
     </section>
 
-    <section id="projectSection">
+    <section id="aboutSection" class="tab-content">
+      <h1>About Me</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi. Pellentesque aliquet, turpis eget consectetur scelerisque, sem lorem lobortis erat, et malesuada urna dolor rutrum nisi. Donec ac accumsan leo. Integer commodo iaculis nulla et commodo. Donec et mattis ligula. Aenean varius leo id consequat sodales. Phasellus lobortis elementum nunc, vel egestas enim tincidunt a. Nulla dolor dolor, tempus euismod justo vitae, pretium placerat elit.</p>
+    </section>
+
+    <section id="projectSection" class="tab-content">
       <h1>Projects</h1>
         <article class="template">
           <h2>Title</h2>
@@ -46,7 +51,7 @@
         </article>
     </section>
 
-    <section id="contactSection">
+    <section id="contactSection" class="tab-content">
       <h1>Contact Me</h1>
       <ul id="contactUL">
         <li><img id="linkedInLogo" src="img/linkedInLogo.png"/><a href="https://www.linkedin.com/in/marc-fieser" target="_blank" class="linkedIn" >Connect on LinkedIn!</a></li>
@@ -63,5 +68,6 @@
     </footer>
     <script src="scripts/portfolioProjects.js" type="text/javascript"></script>
     <script src="scripts/projects.js" type="text/javascript"></script>
+    <script src="scripts/tabView.js" type="text/javascript"></script>
   </body>
 </html>
