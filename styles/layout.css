@@ -6,11 +6,11 @@ img {
   display: table;
   clear: both;
 }
-.intro {
+#introSection, #aboutSection{
   max-width: 95%;
   margin: 0 auto;
 }
-.intro img{
+#introSection img{
   display: block;
   width: 100%;
   max-width: 1024px;
