@@ -1,3 +1,4 @@
+/********************************NAV CSS***************************************/
 .main-nav {
   padding: 0.1em;
   background-color: black;
@@ -5,7 +6,6 @@
   position: relative;
 
 }
-
 .main-nav ul {
   display: none;
   padding: 0;
@@ -23,13 +23,14 @@
   padding: .5em .2em;
   border-bottom: 1px solid #ccc;
 }
-
+/********************************Icons for Nav*********************************/
 .icon-menu {
   text-align: right;
   font-size: 2em;
   margin-top: 20px;
   margin-right: 10px;
 }
+/*******************************Project CSS************************************/
 .template {
   display: none;
 }
@@ -53,6 +54,7 @@
   font-size: .75em;
   text-align: right;
 }
+/*******************************Contact CSS************************************/
 #linkedInLogo{
   border-radius: 50%;
 }
@@ -80,7 +82,7 @@ a.gitHub:hover {
 a.gitHub:active {
     color: #6e5494;
 }
-
+/*************************Media Q for Screen Size 760**************************/
 @media screen and (min-width: 760px){
   .main-nav ul {
     width: 100%;
@@ -100,8 +102,13 @@ a.gitHub:active {
     display: none;
   }
 }
+/*************************Media Q for Screen Size 1200*************************/
 @media screen and (min-width: 1200px){
   .project{
     width: 28%;
+  }
+  main{
+    max-width: 75%;
+    margin: 0 auto;
   }
 }
