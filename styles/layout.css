@@ -1,23 +1,5 @@
-img {
-  max-width: 100%;
-}
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-#introSection, #aboutSection{
-  max-width: 95%;
-  margin: 0 auto;
-}
-#introSection img{
-  display: block;
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
-  align: middle;
-}
 
+/********************************Header CSS************************************/
 header{
   background-color: black;
   color: white;
@@ -33,8 +15,21 @@ header ul{
   left: 10px;
   top: 10px;
 }
-
-
+/********************************Sectional CSS*********************************/
+#introSection, #aboutSection{
+  max-width: 95%;
+  margin: 0 auto;
+}
+#introSection img{
+  display: block;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  align: middle;
+}
+canvas{
+  margin: 0 auto;
+}
 #projectSection{
   max-width: 95%;
   margin: 0 auto;
@@ -52,6 +47,7 @@ header ul{
   margin-top: 25px;
   margin-right: 15px;
 }
+/********************************Footer CSS************************************/
 footer{
   position: relative;
   text-align: right;
@@ -86,7 +82,3 @@ footer p{
   margin: 0;
   padding-top: 10px;
 }
-
-/*#arrowUp a:hover{
-  margin-bottom: -150px;
-}*/

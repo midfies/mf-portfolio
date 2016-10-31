@@ -2,7 +2,14 @@ body {
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
-
+}
+img {
+  max-width: 100%;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 header a, header a:link, header a:active {
   text-decoration: none;

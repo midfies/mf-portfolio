@@ -1,6 +1,5 @@
 //**********************Charting Data*******************************************
 var canvas = $('#aboutMeChart').get(0);
-console.log(canvas);
 var data = {
   labels: [
     'Baseball Enthusiest',
@@ -28,3 +27,14 @@ function drawChart() {
     scales: [{ticks:{ beginAtZero:true}}] });
 }
 drawChart();
+
+$(document).ready( function(){
+    //Get the canvas &
+  var c = $('#aboutMeChart');
+  var container = $(c).parent();
+
+  //Run function when browser resizes
+  $('#aboutMeChart').attr( 'width', $(container).width() );
+  $('#aboutMeChart').attr( 'width', $(container).height() );
+
+});

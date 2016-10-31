@@ -9,56 +9,59 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script id="project-template" type="text/x-handlebars-template">
+      <article class="project">
+        <h2>{{title}}</h2>
+        <div>{{postedDate}}</div><br/>
+        <a href="{{linkUrl}}" target="_blank">
+          <img src ="{{image}}"/>
+        </a>
+        <p>{{summary}}</p>
+        <p class="dateOfProject">{{date}}</p>
+      </article>
+    </script>
   </head>
   <body>
     <div id="top"></div>
     <header class="clearfix">
-        <nav class="main-nav">
-          <img id="logo" src="http://placehold.it/60x60">
-          <div class = "icon-menu"></div>
-          <ul>
-            <li class="tab" data-content="homeSection"><a href="#top" class="icon-home"> Home</a></li>
-            <li class="tab" data-content="aboutSection"><a href="#" class="icon-happy"> About</a></li>
-            <li class="tab" data-content="projectSection"><a href="#" class="icon-happy2"> Portfolio</a></li>
-            <li class="tab" data-content="contactSection"><a href="#" class="icon-address-book"> Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-    
-    <section id="introSection" class="tab-content">
-      <h1>Marc Fieser</h1>
-      <h2>Welcome to My Portfolio</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi. Pellentesque aliquet, turpis eget consectetur scelerisque, sem lorem lobortis erat, et malesuada urna dolor rutrum nisi. Donec ac accumsan leo. Integer commodo iaculis nulla et commodo. Donec et mattis ligula. Aenean varius leo id consequat sodales. Phasellus lobortis elementum nunc, vel egestas enim tincidunt a. Nulla dolor dolor, tempus euismod justo vitae, pretium placerat elit. </p>
-      <img src ="http://placehold.it/1024x600"/>
-    </section>
+      <nav class="main-nav">
+        <img id="logo" src="http://placehold.it/60x60">
+        <div class = "icon-menu"></div>
+        <ul id='nav'>
+          <li class="tab" data-content="homeSection"><a href="#top" class="icon-home"> Home</a></li>
+          <li class="tab" data-content="aboutSection"><a href="#" class="icon-happy"> About</a></li>
+          <li class="tab" data-content="projectSection"><a href="#" class="icon-happy2"> Portfolio</a></li>
+          <li class="tab" data-content="contactSection"><a href="#" class="icon-address-book"> Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="introSection" class="tab-content">
+        <h1>Marc Fieser</h1>
+        <h2>Welcome to My Portfolio</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi. Pellentesque aliquet, turpis eget consectetur scelerisque, sem lorem lobortis erat, et malesuada urna dolor rutrum nisi. Donec ac accumsan leo. Integer commodo iaculis nulla et commodo. Donec et mattis ligula. Aenean varius leo id consequat sodales. Phasellus lobortis elementum nunc, vel egestas enim tincidunt a. Nulla dolor dolor, tempus euismod justo vitae, pretium placerat elit. </p>
+        <img src ="http://placehold.it/1024x600"/>
+      </section>
 
-    <section id="aboutSection" class="tab-content">
-      <h1>About Me</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi. Pellentesque aliquet, turpis eget consectetur scelerisque, sem lorem lobortis erat, et malesuada urna dolor rutrum nisi. Donec ac accumsan leo. Integer commodo iaculis nulla et commodo. Donec et mattis ligula. Aenean varius leo id consequat sodales. Phasellus lobortis elementum nunc, vel egestas enim tincidunt a. Nulla dolor dolor, tempus euismod justo vitae, pretium placerat elit.</p>
-    </section>
+      <section id="aboutSection" class="tab-content">
+        <h1>About Me</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi. Pellentesque aliquet, turpis eget consectetur scelerisque, sem lorem lobortis erat, et malesuada urna dolor rutrum nisi. Donec ac accumsan leo. Integer commodo iaculis nulla et commodo. Donec et mattis ligula. Aenean varius leo id consequat sodales. Phasellus lobortis elementum nunc, vel egestas enim tincidunt a. Nulla dolor dolor, tempus euismod justo vitae, pretium placerat elit.</p>
+        <canvas id="aboutMeChart" width="450" height="300"></canvas>
+      </section>
 
-    <section id="projectSection" class="tab-content">
-      <h1>Projects</h1>
-        <article class="template">
-          <h2>Title</h2>
-          <div>Created <time pubdate datetime="2000-01-01">Creation Time</time></div><br />
-          <a href="" target="_blank">
-            <img src =""/>
-          </a>
-          <p class="summaryOfProject">Summary text</p>
-          <p class="dateOfProject"></p>
-        </article>
-    </section>
+      <section id="projectSection" class="tab-content">
+        <h1>Projects</h1>
+      </section>
 
-    <section id="contactSection" class="tab-content">
-      <h1>Contact Me</h1>
-      <ul id="contactUL">
-        <li><img id="linkedInLogo" src="img/linkedInLogo.png"/><a href="https://www.linkedin.com/in/marc-fieser" target="_blank" class="linkedIn" >Connect on LinkedIn!</a></li>
-        <li><img id="gitHubLogo" src="img/gitHubLogo.png"/><a href="https://github.com/midfies" target="_blank" class="gitHub">Explore my GitHub!</a></li>
-        <li><img id="gmailLogo" src="img/gmailLogo.png"/>Send me and E-mail!</li>
-      </ul>
-    </section>
+      <section id="contactSection" class="tab-content">
+        <h1>Contact Me</h1>
+        <ul id="contactUL">
+          <li><img id="linkedInLogo" src="img/linkedInLogo.png"/><a href="https://www.linkedin.com/in/marc-fieser" target="_blank" class="linkedIn" >Connect on LinkedIn!</a></li>
+          <li><img id="gitHubLogo" src="img/gitHubLogo.png"/><a href="https://github.com/midfies" target="_blank" class="gitHub">Explore my GitHub!</a></li>
+          <li><img id="gmailLogo" src="img/gmailLogo.png"/>Send me and E-mail!</li>
+        </ul>
+      </section>
+    </main>
 
     <footer>
       <a href="#top">
@@ -66,8 +69,13 @@
       </a>
       <p>&copy 2016 Marc Fieser</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="scripts/portfolioProjects.js" type="text/javascript"></script>
     <script src="scripts/projects.js" type="text/javascript"></script>
     <script src="scripts/tabView.js" type="text/javascript"></script>
+    <script src="scripts/aboutChart.js" type="text/javascript"></script>
+
   </body>
 </html>

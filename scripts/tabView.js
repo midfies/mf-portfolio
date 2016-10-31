@@ -1,10 +1,16 @@
-//  Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
 var tabView = {};
 
 tabView.handleMainNav = function () {
+  $('.main-nav').on('mouseenter', function(){
+    $('.main-nav ul').show();
+  });
+  $('.main-nav').on('mouseleave', function(){
+    $('.main-nav ul').hide();
+  });
   $('.main-nav').on('click', '.tab', function() {
 
     $('.tab-content').hide();
+    $('.main-nav ul').hide();
     var $tab = $(this).attr('data-content');
     if($tab === 'homeSection'){
       $('.tab-content').fadeIn();
