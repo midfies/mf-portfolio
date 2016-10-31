@@ -12,7 +12,7 @@
     <script id="project-template" type="text/x-handlebars-template">
       <article class="project">
         <h2>{{title}}</h2>
-        <div>Created {{postedDate}}</div><br/>
+        <div>{{postedDate}}</div><br/>
         <a href="{{linkUrl}}" target="_blank">
           <img src ="{{image}}"/>
         </a>
@@ -27,7 +27,7 @@
       <nav class="main-nav">
         <img id="logo" src="http://placehold.it/60x60">
         <div class = "icon-menu"></div>
-        <ul>
+        <ul id='nav'>
           <li class="tab" data-content="homeSection"><a href="#top" class="icon-home"> Home</a></li>
           <li class="tab" data-content="aboutSection"><a href="#" class="icon-happy"> About</a></li>
           <li class="tab" data-content="projectSection"><a href="#" class="icon-happy2"> Portfolio</a></li>
@@ -46,7 +46,7 @@
       <section id="aboutSection" class="tab-content">
         <h1>About Me</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi. Pellentesque aliquet, turpis eget consectetur scelerisque, sem lorem lobortis erat, et malesuada urna dolor rutrum nisi. Donec ac accumsan leo. Integer commodo iaculis nulla et commodo. Donec et mattis ligula. Aenean varius leo id consequat sodales. Phasellus lobortis elementum nunc, vel egestas enim tincidunt a. Nulla dolor dolor, tempus euismod justo vitae, pretium placerat elit.</p>
-        <canvas id="aboutMeChart" width="900" height="575"></canvas>
+        <canvas id="aboutMeChart" width="450" height="300"></canvas>
       </section>
 
       <section id="projectSection" class="tab-content">

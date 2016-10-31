@@ -22,10 +22,9 @@ Project.prototype.toHtml = function() {
   // return $newProject;
 
   var source = $('#project-template').html();
-  console.log('here');
   var templateRender = Handlebars.compile(source);
   this.daysAgo = parseInt((new Date() - new Date(this.date)) / 60 / 60 / 24 / 1000);
-  this.postedDate = this.date ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  this.postedDate = this.date ? 'Posted ' + this.daysAgo + ' days ago' : '(draft)';
   return templateRender(this);
 };
 

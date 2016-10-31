@@ -13,10 +13,6 @@
   clear: both;
 }
 
-.main-nav:hover ul {
-  display: block;
-}
-
 .main-nav li {
   margin-right: .4em;
   font-size: 1.5em;
@@ -30,19 +26,22 @@
   margin-top: 20px;
   margin-right: 10px;
 }
+
 /*******************************Project CSS************************************/
 .template {
   display: none;
 }
 .project{
-  width: 45%;
-  margin: 1% 1%;
+  min-width: 250px;
+  max-width: 450px;
+  width: 50%;
+  margin: 1% auto;
   padding: 0;
-  display: inline-block;
   border: 1px solid black;
   border-radius: 5%;
   padding: 1%;
 }
+
 .project h2{
   text-align: center;
 }
@@ -82,6 +81,9 @@ a.gitHub:hover {
 a.gitHub:active {
     color: #6e5494;
 }
+@media screen and (min-width: 600px){
+
+}
 /*************************Media Q for Screen Size 760**************************/
 @media screen and (min-width: 760px){
   .main-nav ul {
@@ -101,6 +103,11 @@ a.gitHub:active {
   .icon-menu {
     display: none;
   }
+  .project{
+    display: inline-block;
+    width: 45%;
+  }
+
 }
 /*************************Media Q for Screen Size 1200*************************/
 @media screen and (min-width: 1200px){

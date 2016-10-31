@@ -27,7 +27,9 @@ header ul{
   margin: 0 auto;
   align: middle;
 }
-
+canvas{
+  margin: 0 auto;
+}
 #projectSection{
   max-width: 95%;
   margin: 0 auto;
