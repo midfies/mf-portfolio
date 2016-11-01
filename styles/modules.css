@@ -19,6 +19,10 @@
   padding: .5em .2em;
   border-bottom: 1px solid #ccc;
 }
+.main-nav:hover ul {
+  display: block;
+}
+
 /********************************Icons for Nav*********************************/
 .icon-menu {
   text-align: right;
