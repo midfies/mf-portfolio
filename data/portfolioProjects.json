@@ -4,7 +4,9 @@
     "linkUrl":"#",
     "image":"http://placehold.it/200x115",
     "summary":"Summary ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi.",
-    "date":"2016-10-30"
+    "date":"2016-10-30",
+    "languages": ["javaScript", "HTML", "CSS"],
+    "libraries": ["JQuery", "AJAX", "Chart.js"]
   },
 
   {
@@ -12,28 +14,36 @@
     "linkUrl":"#",
     "image":"http://placehold.it/200x115",
     "summary":"Summary ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi.",
-    "date":"2016-10-20"
+    "date":"2016-10-20",
+    "languages": ["javaScript", "HTML", "CSS"],
+    "libraries": ["JQuery", "AJAX", "Chart.js"]
   },
   {
     "title":"Project 2",
     "linkUrl":"#",
     "image":"http://placehold.it/200x115",
     "summary":"Summary ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi.",
-    "date":"2016-10-15"
+    "date":"2016-10-15",
+    "languages": ["javaScript", "HTML", "CSS"],
+    "libraries": ["JQuery", "AJAX"]
   },
   {
     "title":"Project 1",
     "linkUrl":"#",
     "image":"http://placehold.it/200x115",
     "summary":"Summary ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi.",
-    "date":"2016-10-10"
+    "date":"2016-10-10",
+    "languages": ["javaScript", "HTML", "CSS"],
+    "libraries": ["JQuery"]
   },
   {
     "title":"Project 5",
     "linkUrl":"#",
     "image":"http://placehold.it/200x115",
     "summary":"Summary ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi.",
-    "date":"2016-11-1"
+    "date":"2016-11-1",
+    "languages": ["javaScript", "HTML", "CSS"],
+    "libraries": []
   }
 
 ]
