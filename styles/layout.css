@@ -34,6 +34,13 @@ canvas{
   max-width: 95%;
   margin: 0 auto;
 }
+#langLibList{
+  width:90%;
+  margin: 0 auto;
+}
+.projectDetails{
+  display: inline-block;
+}
 
 #contactSection{
   max-width: 95%;

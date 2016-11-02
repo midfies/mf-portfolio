@@ -17,6 +17,16 @@
           <img src ="{{image}}"/>
         </a>
         <p>{{summary}}</p>
+        <ul class="projectDetails" id="languagesInProjects">
+          {{#each languages}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+        <ul class="projectDetails" id="librariesInProject">
+          {{#each libraries}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
         <p class="dateOfProject">{{date}}</p>
       </article>
     </script>
@@ -41,6 +51,11 @@
         <h2>Welcome to My Portfolio</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi. Pellentesque aliquet, turpis eget consectetur scelerisque, sem lorem lobortis erat, et malesuada urna dolor rutrum nisi. Donec ac accumsan leo. Integer commodo iaculis nulla et commodo. Donec et mattis ligula. Aenean varius leo id consequat sodales. Phasellus lobortis elementum nunc, vel egestas enim tincidunt a. Nulla dolor dolor, tempus euismod justo vitae, pretium placerat elit. </p>
         <img src ="http://placehold.it/1024x600"/>
+        <p id="langLibList">
+            <h4>Programming Languages In Portfolio</h4><ul id="languageList"></ul>
+            <h4>Programming Libraries In Portfolio</h4><ul id="libraryList"></ul>
+        </p>
+
       </section>
 
       <section id="aboutSection" class="tab-content">
@@ -73,7 +88,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="scripts/projects.js"></script>
-    <script src="scripts/tabView.js"></script>
+    <script src="scripts/projectView.js"></script>
     <script src="scripts/aboutChart.js"></script>
 
   </body>
