@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <script id="project-template" type="text/x-handlebars-template">
-      <article class="project">
+      <article class="project" data-id="{{title}}">
         <h2>{{title}}</h2>
         <div>{{postedDate}}</div><br/>
         <a href="{{linkUrl}}" target="_blank">
@@ -66,6 +66,18 @@
 
       <section id="projectSection" class="tab-content">
         <h1>Projects</h1>
+        <ul id="filters">
+          <li>
+            <select id="language-filter">
+              <option value="">-- Filter by Language --</option>
+            </select>
+          </li>
+          <li>
+            <select id="library-filter">
+              <option value="">-- Filter by Library --</option>
+            </select>
+          </li>
+        </ul>
       </section>
 
       <section id="contactSection" class="tab-content">

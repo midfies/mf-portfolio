@@ -5,7 +5,7 @@
     "image":"http://placehold.it/200x115",
     "summary":"Summary ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi.",
     "date":"2016-10-30",
-    "languages": ["javaScript", "HTML", "CSS"],
+    "languages": ["Test","HTML", "CSS"],
     "libraries": ["JQuery", "AJAX", "Chart.js"]
   },
 
