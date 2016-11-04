@@ -1,10 +1,10 @@
-// (function(module) {
+(function(module) {
   var projects = [];
 
-  function Project (projectsList) {
-    for (var keys in projectsList) {
-      this[keys] = projectsList[keys];
-    }
+  function Project (opts) {
+    Object.keys(opts).forEach(function(prop) {
+      this[prop] = opts[prop];
+    }, this);
   };
 
   Project.allProjects = [];
@@ -33,8 +33,6 @@
         url: 'data/portfolioProjects.json',
         success: function (result, message, xhr) {
           var etags = xhr.getResponseHeader('ETag');
-          console.log(storedETag, 'storedETag');
-          console.log(etags, 'etags');
           if(storedETag !== etags){
             localStorage.setItem('etag-portfolio', etags);
             $.ajax({
@@ -71,39 +69,30 @@
     var parseData = JSON.parse(dataFromStorage);
     Project.loadAll(parseData);
     projectView.renderProjectPage();
-    projectView.showLanguages();
-    projectView.showLibraries();
+    projectView.show(Project.getFromProject('languages'), 'li', 'languageList');
+    projectView.show(Project.getFromProject('libraries'), 'li', 'libraryList');
+    projectView.show(Project.getFromProject('languages'), 'option', 'language-filter');
+    projectView.show(Project.getFromProject('libraries'), 'option', 'library-filter');
   };
 
-  Project.allLanguages = function() {
-    return Project.allProjects.map(function(p) {
-      return p.languages;
-    }).reduce(function(a, b) {
-      return a.concat(b);
-    },[])
-      .reduce(function(acc, cur){
-        if (acc.indexOf(cur) === -1) {
-          acc.push(cur);
-        }
-        return acc;
-      },[]);
-  };
-
-  Project.allLibraries = function() {
-    return Project.allProjects.map(function(p) {
-      return p.libraries;
-    }).reduce(function(a, b) {
-      return a.concat(b);
-    },[])
-      .reduce(function(acc, cur){
-        if (acc.indexOf(cur) === -1) {
-          acc.push(cur);
-        }
-        return acc;
-      },[]);
-
+  Project.getFromProject = function(projectKey) {
+    return function() {
+      return Project.allProjects
+        .map(function(p) {
+          return p[projectKey];
+        })
+        .reduce(function(a, b) {
+          return a.concat(b);
+        },[])
+        .reduce(function(acc, cur){
+          if (acc.indexOf(cur) === -1) {
+            acc.push(cur);
+          }
+          return acc;
+        },[]);
+    };
   };
 
 
-//   module.Project = Project;
-// })(window);
+  module.Project = Project;
+})(window);
