@@ -44,6 +44,15 @@
     "date":"2016-11-1",
     "languages": ["javaScript", "HTML", "CSS"],
     "libraries": []
+  },
+  {
+    "title":"Project 6",
+    "linkUrl":"#",
+    "image":"http://placehold.it/200x115",
+    "summary":"Summary ipsum dolor sit amet, consectetur adipiscing elit. Duis sed massa mi.",
+    "date":"2016-11-3",
+    "languages": ["javaScript", "HTML", "CSS"],
+    "libraries": ["jQuery"]
   }
 
 ]
