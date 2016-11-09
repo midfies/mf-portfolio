@@ -7,7 +7,7 @@
       if ($(this).val()) {
         $('.project').hide();
         var valToFind = $(this).val();
-        Project.allProjects.map(function(data, idx, arr){
+        repos.allRepos.map(function(data, idx, arr){
           data.languages.forEach(function(lang){
             if (lang === valToFind){
               projectsWithLanguage.push(arr[idx]);
@@ -16,7 +16,7 @@
           return projectsWithLanguage;
         });
         projectsWithLanguage.forEach(function(toDisplay){
-          $('.project[data-id="' + toDisplay.title + '"]').fadeIn();
+          $('.project[data-id="' + toDisplay.name + '"]').fadeIn();
         });
 
       } else {
@@ -69,7 +69,8 @@
     });
   };
 
-  Project.fetchAll();
+  // Project.fetchAll();
+
 
   module.projectView = projectView;
 })(window);

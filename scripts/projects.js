@@ -67,17 +67,17 @@
   Project.displayProjects = function(){
     var dataFromStorage = localStorage.getItem('projects');
     var parseData = JSON.parse(dataFromStorage);
-    Project.loadAll(parseData);
+    Project.loadAll(repos.allRepos);
     projectView.renderProjectPage();
     projectView.show(Project.getFromProject('languages'), 'li', 'languageList');
-    projectView.show(Project.getFromProject('libraries'), 'li', 'libraryList');
+    //projectView.show(Project.getFromProject('libraries'), 'li', 'libraryList');
     projectView.show(Project.getFromProject('languages'), 'option', 'language-filter');
-    projectView.show(Project.getFromProject('libraries'), 'option', 'library-filter');
+  //  projectView.show(Project.getFromProject('libraries'), 'option', 'library-filter');
   };
 
   Project.getFromProject = function(projectKey) {
     return function() {
-      return Project.allProjects
+      return repos.allRepos
         .map(function(p) {
           return p[projectKey];
         })
