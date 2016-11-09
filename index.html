@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="styles/modules.css">
     <script id="project-template" type="text/x-handlebars-template">
       <article class="project" data-id="{{title}}">
-        <h2>{{title}}</h2>
-        <div>{{postedDate}}</div><br/>
+        <h2>{{name}}</h2>
+        <div>{{date}}</div><br/>
         <a href="{{linkUrl}}" target="_blank">
           <img src ="{{image}}"/>
         </a>
@@ -23,9 +23,9 @@
           {{/each}}
         </ul>
         <ul class="projectDetails" id="librariesInProject">
-          {{#each libraries}}
+          <!-- {{#each libraries}}
             <li>{{this}}</li>
-          {{/each}}
+          {{/each}} -->
         </ul>
         <p class="dateOfProject">{{date}}</p>
       </article>
@@ -99,6 +99,7 @@
       </a>
       <p>&copy 2016 Marc Fieser</p>
     </footer>
+    <script src="githubToken.js"></script>
     <script src="vendor/scripts/jquery-2.1.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
     <script src="vendor/scripts/handlebars.js"></script>
@@ -108,6 +109,8 @@
     <script src="scripts/aboutChart.js"></script>
     <script src="scripts/controller.js"></script>
     <script src="scripts/routes.js"></script>
+    <script src="scripts/repo.js"></script>
+    <script src="scripts/repoView.js"></script>
 
   </body>
 </html>
