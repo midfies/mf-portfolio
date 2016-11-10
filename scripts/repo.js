@@ -8,11 +8,8 @@
   repos.requestRepos = function() {
     /* TODO: How would you like to fetch your repos? Someone say AJAX?!
       Do not forget to call the callback! */
-    $.when ($.ajax({
-      url: 'https://api.github.com/users/midfies/repos',
-      type: 'GET',
-      headers:{'Authorization': 'token ' + githubToken},
-      success: function(data, message, xhr){
+    $.when (
+      $.get('/github/users/codefellows-seattle-301d14/repos', function(data){
         data = repos.removeNonOriginal(data);
         // console.log(data);
         repos.allRepos = data.map(function(data, idx, arr){
@@ -25,26 +22,25 @@
             languages: []
           };
         });
-      }
-    })).then(function(data){
-      var itemsProcessed = 0;
-      repos.allRepos.forEach(function(eachRepo, idx, arr){
-        $.get(eachRepo.languageUrl, function(data){
-          itemsProcessed++;
-          repos.langList.push(Object.keys(data));
-          if (itemsProcessed === arr.length){
-            console.log(repos.allRepos);
-            repos.allRepos.forEach(function(eachRepo, idx, arr){
-              eachRepo.languages = repos.langList[idx];
-              return eachRepo;
-            });
-            repoView.renderRepos();
-            Project.displayProjects();
-          }
+      })).then(function(data){
+        var itemsProcessed = 0;
+        repos.allRepos.forEach(function(eachRepo, idx, arr){
+          $.get(eachRepo.languageUrl, function(data){
+            itemsProcessed++;
+            repos.langList.push(Object.keys(data));
+            if (itemsProcessed === arr.length){
+              console.log(repos.allRepos);
+              repos.allRepos.forEach(function(eachRepo, idx, arr){
+                eachRepo.languages = repos.langList[idx];
+                return eachRepo;
+              });
+              repoView.renderRepos();
+              Project.displayProjects();
+            }
+          });
         });
-      });
 
-    });
+      });
   };
 
 
