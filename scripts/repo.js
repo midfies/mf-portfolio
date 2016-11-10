@@ -9,9 +9,9 @@
     /* TODO: How would you like to fetch your repos? Someone say AJAX?!
       Do not forget to call the callback! */
     $.when (
-      $.get('/github/users/codefellows-seattle-301d14/repos', function(data){
+      $.get('/github/users/midfies/repos', function(data){
         data = repos.removeNonOriginal(data);
-        // console.log(data);
+        console.log(data);
         repos.allRepos = data.map(function(data, idx, arr){
           return {
             name : data.name,
@@ -29,7 +29,7 @@
             itemsProcessed++;
             repos.langList.push(Object.keys(data));
             if (itemsProcessed === arr.length){
-              console.log(repos.allRepos);
+            //  console.log(repos.allRepos);
               repos.allRepos.forEach(function(eachRepo, idx, arr){
                 eachRepo.languages = repos.langList[idx];
                 return eachRepo;
