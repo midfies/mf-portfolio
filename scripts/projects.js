@@ -68,7 +68,7 @@
     var dataFromStorage = localStorage.getItem('projects');
     var parseData = JSON.parse(dataFromStorage);
     Project.loadAll(repos.allRepos);
-    projectView.renderProjectPage();
+    projectView.handleLanguageFilter();
     projectView.show(Project.getFromProject('languages'), 'li', 'languageList');
     //projectView.show(Project.getFromProject('libraries'), 'li', 'libraryList');
     projectView.show(Project.getFromProject('languages'), 'option', 'language-filter');

@@ -53,14 +53,6 @@
   //   });
   // };
 
-  projectView.renderProjectPage = function() {
-    // Project.allProjects.forEach(function(a){
-    //   $('#projectSection').append(a.toHtml('#project-template'));
-    // });
-    // projectView.handleMainNav();
-    // projectView.handleLibraryFilter();
-    projectView.handleLanguageFilter();
-  };
 
   projectView.show = function(func,  tag, id){
     var list = func();
